@@ -9,3 +9,24 @@
 @media(max-width:480px){.brand img{width:48px;height:50px}.brand{font-size:21px;min-width:0}.brand small{font-size:8px}.hero h1{font-size:clamp(55px,14vw,72px)}.hero-actions{align-items:flex-start;flex-direction:column;gap:15px}.hero-intro{font-size:14px}.section-title{font-size:49px}.service-grid{grid-template-columns:1fr}.service-card{min-height:240px}.service-card h3{margin-top:27px}.agenda-panel{padding:23px}.agenda-empty h3{font-size:48px}.closing-section h2{font-size:57px}.footer-grid{gap:30px}.events-empty{display:block;padding:35px 24px}.events-empty-symbol{font-size:80px;margin-bottom:20px}.event-card{grid-template-columns:90px 1fr;gap:17px}.event-date{min-height:110px}.event-date strong{font-size:53px}.event-content h3{font-size:31px}.agenda-hero h1{font-size:60px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}@media(forced-colors:active){:root{scrollbar-color:auto}}
 .agenda-next-date{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#d4b589}
+
+
+/* Mejora visual para revisión de gerencia · fotografía editorial y contraste */
+.hero{background:linear-gradient(90deg,rgba(4,17,32,.96) 0%,rgba(5,22,41,.88) 47%,rgba(6,27,49,.56) 100%),url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=2000&q=85") center 48%/cover no-repeat;background-color:#071e34}
+.hero-grid{opacity:.17}
+.hero-art{background:linear-gradient(155deg,rgba(4,21,37,.30),rgba(4,21,37,.77));backdrop-filter:blur(2px)}
+.intro-section{position:relative;overflow:hidden}
+.intro-section:after{content:"";position:absolute;right:0;bottom:0;width:min(32vw,380px);height:100%;pointer-events:none;background:linear-gradient(90deg,var(--paper),rgba(245,243,238,.25)),url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=850&q=80") center/cover;opacity:.13}
+.intro-section .container{position:relative;z-index:1}
+.services-section{background:#edf0ee}
+.service-card{position:relative;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .25s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 20px 35px #091e3425;z-index:2}
+.service-card:before{content:"";position:absolute;inset:0 0 auto;height:112px;z-index:-1;opacity:.17;background-position:center;background-size:cover}
+.service-card:nth-child(1):before{background-image:url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=750&q=75")}
+.service-card:nth-child(2):before{background-image:url("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=750&q=75")}
+.service-card:nth-child(3):before{background-image:url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=750&q=75")}
+.service-card:nth-child(4):before{background-image:url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=750&q=75")}
+.service-card h3{position:relative}
+.collaboration-section{position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(245,243,238,.98) 0%,rgba(245,243,238,.96) 52%,rgba(245,243,238,.76) 100%),url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80") center/cover}
+.closing-section{background:linear-gradient(90deg,rgba(205,169,120,.95),rgba(205,169,120,.88)),url("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1500&q=80") center/cover}
+@media(max-width:760px){.hero{background-position:60% center}.intro-section:after{display:none}.service-card:before{height:90px}.closing-section{background-position:center}}
