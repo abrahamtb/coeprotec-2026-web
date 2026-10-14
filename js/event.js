@@ -41,7 +41,7 @@ if (homeAgenda && upcoming.length) {
   link.className = 'text-link light';
   link.href = 'inscripciones.html';
   link.textContent = 'Ver agenda y detalles ↗';
-  homeAgenda.append(kicker, title, summary, link);
+  const type = document.createElement('span'); type.className='event-type event-type-light'; type.textContent = next.kind === 'aliado' ? 'EVENTO ALIADO · PARTICIPACIÓN INSTITUCIONAL' : 'EVENTO COEPROTEC'; homeAgenda.append(type, kicker, title, summary, link);
 }
 
 const eventsList = document.getElementById('events-list');
@@ -69,7 +69,7 @@ if (eventsList) {
       title.textContent = item.title;
       const summary = document.createElement('p');
       summary.textContent = item.summary;
-      content.append(meta, title, summary);
+      const type = document.createElement('span'); type.className='event-type'; type.textContent=item.kind==='aliado'?'EVENTO ALIADO · '+(item.participation||'PARTICIPACIÓN INSTITUCIONAL').toUpperCase():'EVENTO COEPROTEC'; content.append(type, meta, title, summary); if(item.organizer){const org=document.createElement('p');org.className='event-organizer';org.textContent='Organiza: '+item.organizer; content.append(org);}
       if (item.detailsUrl && /^(?:\.\/)?[a-z0-9/_?=&%.-]+$/i.test(item.detailsUrl)) {
         const link = document.createElement('a');
         link.className = 'text-link';
@@ -86,4 +86,14 @@ if (eventsList) {
       eventsList.append(card);
     });
   }
+}
+
+
+// Animaciones discretas: respetar preferencia de movimiento reducido y no ocultar contenido sin JS.
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const targets = document.querySelectorAll('.service-card,.intro-grid,.section-head,.agenda-panel,.collaboration-grid,.speaker-showcase,.speaker-profile-card,.contact-page-grid,.event-card,.events-empty,.explain-grid,.closing-grid');
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {entry.target.classList.add('motion-in');observer.unobserve(entry.target);}
+  }),{threshold:0.08});
+  targets.forEach((element,index)=>{element.classList.add('motion-ready');element.style.setProperty('--motion-delay',((index%4)*75)+'ms');observer.observe(element);});
 }
