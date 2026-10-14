@@ -92,3 +92,20 @@
 .speaker-profile-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px #102b3b20}
 @media(max-width:760px){.heritage-layout{grid-template-columns:1fr;gap:25px}.heritage-photo{min-height:280px}.event-type{line-height:1.5}.event-card{gap:15px}}
 @media(prefers-reduced-motion:reduce){.motion-ready{opacity:1;transform:none;transition:none}.service-card:hover,.speaker-profile-card:hover{transform:none}}
+
+
+/* Legibilidad institucional: bloque editorial con contraste fuerte */
+.intro-section:after{opacity:.09}
+.intro-grid{align-items:center;gap:clamp(32px,6vw,88px)}
+.reading-card{position:relative;background:rgba(255,255,255,.97);padding:clamp(28px,3vw,43px);border:1px solid rgba(16,48,69,.13);border-left:4px solid var(--gold);box-shadow:0 24px 65px rgba(9,31,50,.13);max-width:590px}
+.reading-card-label{display:block;font-size:11px;letter-spacing:.17em;font-weight:800;color:#926c3e;margin-bottom:19px}
+.intro-text.reading-card p{font-size:16px;line-height:1.85;color:#24364b;margin:0 0 18px}
+.intro-text.reading-card p:last-child{margin-bottom:0}
+.intro-text.reading-card .reading-lead{font-size:19px;line-height:1.65;color:#10273d;font-weight:600}
+.reading-lead strong{color:#09293e;font-weight:800}
+.reading-divider{height:1px;background:linear-gradient(90deg,#cda978,#dce1e5);margin:22px 0}
+.section-head .section-support{background:#fff;border-left:3px solid #cda978;padding:17px 20px;color:#22394b;font-size:15px;line-height:1.75;box-shadow:0 12px 32px #0a233110;max-width:355px}
+.agenda-intro.reading-summary{background:rgba(255,255,255,.92);border-left:3px solid #cda978;color:#17334b;padding:17px 20px;font-size:15px;line-height:1.8;box-shadow:0 12px 32px #0a23310a}
+.service-card p{font-size:14px;line-height:1.75;color:#33495b}
+.collaboration-grid p:not(.section-index){font-size:16px;line-height:1.8;color:#283f50}
+@media(max-width:760px){.reading-card{max-width:none}.intro-text.reading-card p{font-size:15px}.intro-text.reading-card .reading-lead{font-size:18px}.section-head .section-support{max-width:none}}
