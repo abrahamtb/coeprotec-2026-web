@@ -67,3 +67,9 @@
 .speaker-profile-card h3{font:700 28px/1.1 var(--display);text-transform:uppercase;margin:10px 0}
 .speaker-profile-card p{line-height:1.65;color:#526575;font-size:13px}
 @media(max-width:760px){.contact-page-grid,.speaker-showcase{grid-template-columns:1fr}.speaker-profile-cards{grid-template-columns:1fr}.contact-hero,.speakers-hero{padding:70px 0}.contact-info-panel,.contact-message-panel,.speaker-showcase{padding:24px}}
+
+
+/* Ajustes de navegación y legibilidad con sección de ponentes */
+@media(min-width:761px) and (max-width:1120px){.nav-shell{gap:14px}.main-nav{gap:12px;font-size:12px}.brand{min-width:175px;font-size:22px}.nav-cta{padding:13px}}
+.speaker-showcase .button{margin-top:14px}.speaker-showcase .speaker-image{background-position:center}
+@media(max-width:760px){.speaker-showcase{gap:22px}.speaker-profile-card .photo{height:190px}}
