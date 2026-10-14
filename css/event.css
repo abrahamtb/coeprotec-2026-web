@@ -73,3 +73,22 @@
 @media(min-width:761px) and (max-width:1120px){.nav-shell{gap:14px}.main-nav{gap:12px;font-size:12px}.brand{min-width:175px;font-size:22px}.nav-cta{padding:13px}}
 .speaker-showcase .button{margin-top:14px}.speaker-showcase .speaker-image{background-position:center}
 @media(max-width:760px){.speaker-showcase{gap:22px}.speaker-profile-card .photo{height:190px}}
+
+/* Agenda única y movimiento editorial — COEPROTEC */
+.event-type{display:inline-flex;align-items:center;max-width:100%;gap:8px;margin-bottom:12px;padding:8px 12px;background:#f0e2c9;color:#554021;border:1px solid #d3b17b;font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.event-type-light{background:#d7b77922;color:#f2d7a1;border-color:#e9c48770}
+.event-organizer{font-size:12px!important;font-weight:700;color:#344b5d!important}
+.event-content h3{max-width:780px}
+.heritage-section{background:#091e33;color:#fff}
+.heritage-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.heritage-copy .section-title{color:#fff;margin-bottom:24px}
+.heritage-copy>p:not(.section-index){color:#cbd7e2;font-size:15px;line-height:1.85}
+.heritage-copy .heritage-note{color:#adbac7!important;font-size:12px!important}
+.heritage-photo{min-height:390px;position:relative;display:flex;align-items:flex-end;padding:30px;background:linear-gradient(0deg,#05182bd9,#05182b22),url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1100&q=85") center/cover;border:1px solid #d4af6755}
+.heritage-photo span{color:#e9c88c;letter-spacing:.15em;font-weight:800;font-size:12px}
+.motion-ready{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--motion-delay,0ms);opacity:.01;transform:translateY(23px)}
+.motion-ready.motion-in{opacity:1;transform:none}
+.service-card,.speaker-profile-card,.button,.nav-cta{transition:transform .24s ease,box-shadow .24s ease,background-color .24s ease}
+.speaker-profile-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px #102b3b20}
+@media(max-width:760px){.heritage-layout{grid-template-columns:1fr;gap:25px}.heritage-photo{min-height:280px}.event-type{line-height:1.5}.event-card{gap:15px}}
+@media(prefers-reduced-motion:reduce){.motion-ready{opacity:1;transform:none;transition:none}.service-card:hover,.speaker-profile-card:hover{transform:none}}
