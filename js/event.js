@@ -70,11 +70,19 @@ if (eventsList) {
       const summary = document.createElement('p');
       summary.textContent = item.summary;
       const type = document.createElement('span'); type.className='event-type'; type.textContent=item.kind==='aliado'?'EVENTO ALIADO · '+(item.participation||'PARTICIPACIÓN INSTITUCIONAL').toUpperCase():'EVENTO COEPROTEC'; content.append(type, meta, title, summary); if(item.organizer){const org=document.createElement('p');org.className='event-organizer';org.textContent='Organiza: '+item.organizer; content.append(org);}
-      if (item.detailsUrl && /^(?:\.\/)?[a-z0-9/_?=&%.-]+$/i.test(item.detailsUrl)) {
+      const externalRegistration = item.registrationExternal === true && /^https:\/\/forms\.gle\/[A-Za-z0-9]+$/.test(item.detailsUrl || '');
+      const internalDetails = !item.registrationExternal && /^(?:\.\/)?[a-z0-9/_?=&%.-]+$/i.test(item.detailsUrl || '');
+      if (externalRegistration || internalDetails) {
         const link = document.createElement('a');
         link.className = 'text-link';
         link.href = item.detailsUrl;
-        link.textContent = item.status === 'open' ? 'Ver inscripción y detalles ↗' : 'Ver detalles ↗';
+        if (externalRegistration) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = 'Inscribirse en formulario de EPG UPC ↗';
+        } else {
+          link.textContent = item.status === 'open' ? 'Ver inscripción y detalles ↗' : 'Ver detalles ↗';
+        }
         content.append(link);
       } else {
         const note = document.createElement('span');
