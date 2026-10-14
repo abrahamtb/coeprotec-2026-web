@@ -1,6 +1,6 @@
 // Datos de la agenda pública. Distinguir siempre quién organiza y quién participa.
 // UPC 2026: información transcrita de afiches compartidos por el equipo de COEPROTEC.
-// Sin URL oficial de inscripción validada: no mostrar QR ni registrar asistentes aquí.
+// El enlace externo de registro fue facilitado por el equipo. Confirmar su destino y vigencia con EPG UPC.
 window.COEPROTEC_EVENTS = [
   {
     title: "Contratación por emergencia y retos actuales en las Obras por Impuestos (OxI)",
@@ -10,6 +10,6 @@ window.COEPROTEC_EVENTS = [
     organizer: "Escuela de Postgrado UPC",
     participation: "Auspiciador",
     kind: "aliado", status: "announced",
-    detailsUrl: ""
+    detailsUrl: "https://forms.gle/am4dZkN8PoDBzbDa6", registrationExternal: true
   }
 ];
