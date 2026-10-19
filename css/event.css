@@ -203,3 +203,15 @@ a:hover .link-icon-down{transform:translateY(3px)}
 .hero-actions .button .link-icon{width:19px;height:19px}
 .hero-actions .text-link .link-icon{width:17px;height:17px}
 @media(prefers-reduced-motion:reduce){.link-icon{transition:none}a:hover .link-icon,a:hover .link-icon-down{transform:none}}
+
+/* Ajuste final de identidad: logo con más presencia e iconos circulares */
+.nav-shell{min-height:91px;gap:18px}
+.brand{min-width:235px;gap:10px;font-size:27px}
+.brand img{width:76px;height:76px;object-fit:cover;object-position:top;clip-path:inset(0 0 20% 0);flex-shrink:0}
+.main-nav{gap:clamp(12px,1.5vw,24px)}
+.link-icon{width:20px;height:20px;margin-left:8px;vertical-align:-5px}
+.nav-cta .link-icon{width:19px;height:19px}
+.hero-actions .button .link-icon{width:21px;height:21px}
+.hero-actions .text-link .link-icon{width:19px;height:19px}
+@media(max-width:1050px){.brand{min-width:unset;font-size:25px}.brand img{width:67px;height:67px}.nav-shell{min-height:82px}}
+@media(max-width:760px){.brand img{width:64px;height:64px}.nav-shell{min-height:76px}.brand{font-size:24px}}
