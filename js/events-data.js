@@ -10,6 +10,6 @@ window.COEPROTEC_EVENTS = [
     organizer: "Escuela de Postgrado UPC",
     participation: "Auspiciador",
     kind: "aliado", status: "announced",
-    detailsUrl: "https://forms.gle/am4dZkN8PoDBzbDa6", registrationExternal: true
+    detailsUrl: "https://forms.gle/am4dZkN8PoDBzbDa6", registrationExternal: true, speakersUrl: "ponentes.html#epg-upc"
   }
 ];
