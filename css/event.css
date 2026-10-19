@@ -170,3 +170,19 @@
 .archive-photo-placeholder{margin-top:45px}
 @media(max-width:1000px){.archive-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.archive-video-grid{grid-template-columns:1fr}.archive-photo-placeholder{margin-top:28px}}
+
+
+/* Refuerzo de identidad institucional: lectura y acciones */
+.reading-card .reading-card-label{display:block;letter-spacing:.16em;font-size:12px;font-weight:800;color:#976732;margin-bottom:19px}
+.reading-card .reading-lead{font-size:clamp(17px,1.6vw,20px);line-height:1.75;color:#102a40;font-weight:600}
+.reading-card .reading-lead strong{color:#0c304b}
+.reading-card p{color:#263d50;line-height:1.85}
+.cta-icon{display:inline-block;width:14px;height:14px;position:relative;flex:0 0 14px;margin-left:7px;vertical-align:-2px;transition:transform .23s ease}
+.cta-icon::before{content:"";position:absolute;left:3px;top:2px;width:8px;height:8px;border-right:1.8px solid currentColor;border-top:1.8px solid currentColor}
+.cta-icon::after{content:"";position:absolute;left:2px;top:9px;width:12px;height:1.8px;background:currentColor;transform:rotate(-45deg);transform-origin:left center}
+a:hover .cta-icon{transform:translate(2px,-2px)}
+.cta-icon-down::before{left:3px;top:3px;transform:rotate(135deg)}
+.cta-icon-down::after{left:7px;top:0;width:1.8px;height:12px;transform:none}
+a:hover .cta-icon-down{transform:translateY(3px)}
+.nav-cta,.button,.text-link{transition:background-color .23s ease,color .23s ease,transform .23s ease}
+@media(prefers-reduced-motion:reduce){.cta-icon{transition:none}a:hover .cta-icon,a:hover .cta-icon-down{transform:none}}
