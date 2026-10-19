@@ -109,3 +109,51 @@
 .service-card p{font-size:14px;line-height:1.75;color:#33495b}
 .collaboration-grid p:not(.section-index){font-size:16px;line-height:1.8;color:#283f50}
 @media(max-width:760px){.reading-card{max-width:none}.intro-text.reading-card p{font-size:15px}.intro-text.reading-card .reading-lead{font-size:18px}.section-head .section-support{max-width:none}}
+
+
+/* Archivo COEPROTEC 2025 y ponentes EPG UPC 2026 */
+.heritage-photo{color:inherit;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease}
+.heritage-photo:hover{transform:translateY(-5px);box-shadow:0 25px 45px #0005}
+.heritage-copy .button{margin:15px 0 16px}
+.historic-hero{background:linear-gradient(90deg,#061b30ee,#092a44b5),url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1700&q=85") center/cover}
+.historic-facts{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.historic-facts span{border:1px solid #d5ac7290;color:#f4dfc0;padding:10px 15px;font-size:12px;font-weight:700}
+.historic-intro{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.historic-intro .reading-card{padding:34px;background:#fff;border-left:4px solid #cda978}
+.historic-intro .reading-card p{color:#233b4e;line-height:1.75}
+.historic-intro .reading-card .reading-lead{font-weight:700}
+.historic-speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:35px}
+.historic-speaker{background:#fff;border:1px solid #d9dfdf;border-top:3px solid #cda978;padding:28px;box-shadow:0 12px 30px #061b3010}
+.historic-speaker.featured{grid-column:1/-1;padding:35px;background:#102b46;color:#fff;border-color:#cda978}
+.historic-speaker h3{font:700 clamp(29px,3vw,40px)/1.1 var(--display);text-transform:uppercase;margin:13px 0;color:#102c42}
+.historic-speaker.featured h3{color:#fff;font-size:clamp(40px,4vw,56px)}
+.historic-speaker p{font-size:14px;line-height:1.8;color:#526575}
+.historic-speaker.featured p{color:#d1dce8;max-width:790px}
+.historic-media{background:#e9eeed}
+.historic-media-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;margin-top:32px}
+.historic-media-cover{min-height:380px;padding:30px;display:flex;align-items:end;background:linear-gradient(0deg,#061b30e8,#061b3020),url("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1100&q=82") center/cover}
+.historic-media-cover span{font-size:12px;font-weight:800;letter-spacing:.14em;color:#e7cb92}
+.historic-media-message{background:#fff;padding:35px;display:flex;flex-direction:column;justify-content:center}
+.historic-media-message h3{font:700 36px/1 var(--display);text-transform:uppercase}
+.historic-media-message p{font-size:14px;line-height:1.85}
+.historic-media-message .button{align-self:flex-start;margin-top:14px}
+.ally-speakers{background:#edf0ee}
+.ally-speakers .historic-speaker.featured{margin-bottom:24px}
+.ally-tables{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ally-table{background:#fff;padding:30px;border:1px solid #d7dfdf;border-top:4px solid #cda978}
+.ally-table h3{font:700 29px/1.05 var(--display);text-transform:uppercase;color:#102c42;margin:0}
+.ally-table p{font-size:13px;color:#87663e;font-weight:700}
+.ally-table ul{padding-left:20px}
+.ally-table li{font-size:14px;line-height:1.65;color:#314658;margin:15px 0}
+.ally-source{font-size:12px;line-height:1.75;color:#5c6c78;max-width:850px;margin:24px 0}
+/* Tarjetas de eventos: claridad, jerarquia, boton externo */
+.events-list{border-top:none;display:grid;gap:24px}
+.event-card{display:grid;grid-template-columns:130px minmax(0,1fr);gap:26px;padding:30px;background:#fff;border:1px solid #d9e0e5;border-top:4px solid #cda978;box-shadow:0 15px 38px #092d4015;transition:transform .25s,box-shadow .25s}
+.event-card:hover{transform:translateY(-3px);box-shadow:0 22px 45px #092d4025}
+.event-date{min-height:130px;align-self:start}
+.event-content h3{font-size:clamp(30px,3.4vw,42px);max-width:730px;line-height:1.09}
+.event-content>p:not(.event-meta){font-size:15px;line-height:1.8}
+.event-content .text-link{background:#0b2944;color:#fff;border:0;padding:13px 17px;margin-top:15px}
+.event-content .text-link:hover{background:#234c6a}
+@media(max-width:760px){.historic-intro,.historic-media-grid,.ally-tables{grid-template-columns:1fr;gap:24px}.historic-speakers{grid-template-columns:1fr}.historic-speaker.featured{grid-column:auto}.historic-media-cover{min-height:270px}.event-card{grid-template-columns:1fr;padding:22px}.event-date{min-height:85px;flex-direction:row;gap:9px;justify-content:flex-start;padding-left:18px}.event-date strong{font-size:45px}}
+@media(prefers-reduced-motion:reduce){.heritage-photo:hover,.event-card:hover{transform:none}}
