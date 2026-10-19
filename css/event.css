@@ -217,9 +217,9 @@ a:hover .link-icon-down{transform:translateY(3px)}
 @media(max-width:760px){.brand img{width:64px;height:64px}.nav-shell{min-height:76px}.brand{font-size:24px}}
 
 
-/* Isotipo independiente: ocultar la tipografía duplicada del archivo original */
+/* Isotipo recortado: el nombre institucional solo aparece como texto a su derecha. */
 .brand{gap:11px}
-.brand-symbol{position:relative;display:block;width:88px;height:74px;flex:0 0 88px;overflow:hidden}
-.brand .brand-symbol img{position:absolute;display:block;max-width:none;width:99px;height:99px;left:-5px;top:-8px;object-fit:cover;object-position:center top;clip-path:none}
-@media(max-width:1050px){.brand-symbol{width:76px;height:64px;flex-basis:76px}.brand .brand-symbol img{width:87px;height:87px;left:-5px;top:-7px}}
-@media(max-width:760px){.brand-symbol{width:70px;height:59px;flex-basis:70px}.brand .brand-symbol img{width:80px;height:80px;left:-5px;top:-6px}}
+.brand-symbol{position:relative;display:block;width:88px;height:61px;flex:0 0 88px;overflow:hidden}
+.brand .brand-symbol img{position:absolute;display:block;max-width:none;width:99px;height:99px;left:-5px;top:-10px;object-fit:cover;object-position:center top;clip-path:none}
+@media(max-width:1050px){.brand-symbol{width:76px;height:53px;flex-basis:76px}.brand .brand-symbol img{width:87px;height:87px;left:-5px;top:-9px}}
+@media(max-width:760px){.brand-symbol{width:70px;height:49px;flex-basis:70px}.brand .brand-symbol img{width:80px;height:80px;left:-5px;top:-8px}}
