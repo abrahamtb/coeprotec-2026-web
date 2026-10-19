@@ -157,3 +157,16 @@
 .event-content .text-link:hover{background:#234c6a}
 @media(max-width:760px){.historic-intro,.historic-media-grid,.ally-tables{grid-template-columns:1fr;gap:24px}.historic-speakers{grid-template-columns:1fr}.historic-speaker.featured{grid-column:auto}.historic-media-cover{min-height:270px}.event-card{grid-template-columns:1fr;padding:22px}.event-date{min-height:85px;flex-direction:row;gap:9px;justify-content:flex-start;padding-left:18px}.event-date strong{font-size:45px}}
 @media(prefers-reduced-motion:reduce){.heritage-photo:hover,.event-card:hover{transform:none}}
+
+/* Biblioteca audiovisual del archivo institucional */
+.archive-video-intro{max-width:760px;color:#3b5061;font-size:15px;line-height:1.75;margin:22px 0 28px}
+.archive-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.archive-video{background:#fff;border:1px solid #d5dfdf;box-shadow:0 12px 32px #102f4013;min-width:0;overflow:hidden}
+.archive-video-frame{position:relative;aspect-ratio:16/9;background:#071e34}
+.archive-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.archive-video-content{padding:23px}
+.archive-video-content h3{font:700 28px/1.07 var(--display);text-transform:uppercase;color:#102c42;margin:12px 0}
+.archive-video-content p{font-size:13px;line-height:1.7;color:#526575}
+.archive-photo-placeholder{margin-top:45px}
+@media(max-width:1000px){.archive-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.archive-video-grid{grid-template-columns:1fr}.archive-photo-placeholder{margin-top:28px}}
