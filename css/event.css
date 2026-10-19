@@ -186,3 +186,20 @@ a:hover .cta-icon{transform:translate(2px,-2px)}
 a:hover .cta-icon-down{transform:translateY(3px)}
 .nav-cta,.button,.text-link{transition:background-color .23s ease,color .23s ease,transform .23s ease}
 @media(prefers-reduced-motion:reduce){.cta-icon{transition:none}a:hover .cta-icon,a:hover .cta-icon-down{transform:none}}
+
+
+/* Refinamiento de composicion editorial y SVG de navegación */
+@media(min-width:1000px){
+.intro-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,4vw,64px);align-items:center}
+.intro-grid .section-title{font-size:clamp(51px,5vw,78px)}
+.intro-grid .reading-card{width:100%;max-width:none;min-height:0;padding:clamp(30px,3vw,44px) clamp(34px,4vw,58px)}
+.intro-grid .reading-card .reading-lead{font-size:clamp(17px,1.45vw,19px);line-height:1.65}
+.intro-grid .reading-card p{line-height:1.72}
+}
+.link-icon{display:inline-block;vertical-align:middle;flex-shrink:0;margin-left:9px;transition:transform .2s ease}
+a:hover .link-icon{transform:translate(2px,-2px)}
+a:hover .link-icon-down{transform:translateY(3px)}
+.nav-cta .link-icon{width:16px;height:16px}
+.hero-actions .button .link-icon{width:19px;height:19px}
+.hero-actions .text-link .link-icon{width:17px;height:17px}
+@media(prefers-reduced-motion:reduce){.link-icon{transition:none}a:hover .link-icon,a:hover .link-icon-down{transform:none}}
