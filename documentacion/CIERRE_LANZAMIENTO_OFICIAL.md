@@ -29,3 +29,9 @@
 **No confundir «código actualizado» con «aprobación para publicar»**. La rama main sigue teniendo el prototipo anterior mientras no se integre el PR. Cambiar un CNAME o seleccionar main antes de integrar podría mostrar una versión distinta de la esperada.
 
 El nombre oficial no implica por sí mismo personería jurídica propia; en tratamiento de datos, la empresa responsable indicada en el borrador es Consultoria Empresarial P & M S.A.C., RUC 20523027655, según autorización comunicada por gerencia.
+
+## Redes sociales oficiales
+
+Canales previstos: Facebook, Instagram, TikTok, X y YouTube. Búsqueda pública del 27/10/2026: no fue posible verificar perfiles oficiales vinculados a COEPROTEC. No confundir menciones de eventos de terceros o videos con un perfil institucional autorizado.
+
+Integración preparada en `js/redes-oficiales.js`; las URL están vacías y la sección se oculta automáticamente mientras no existan enlaces verificados. Gerencia deberá aportar la URL exacta de cada red y confirmar que controla esa cuenta antes de publicarla.
