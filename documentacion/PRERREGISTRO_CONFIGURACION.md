@@ -33,3 +33,5 @@ Cloudflare Pages Functions requiere que la carpeta `functions/` esté en el proy
 - Información preliminar publicada en `privacidad.html`; **no** sustituye la política aprobada.
 - Pendientes: domicilio, canal ARCO/revocación, plazo de conservación, encargados y transferencias, inscripción del banco cuando corresponda y aprobación jurídica del texto definitivo.
 - `PREREG_ENABLED` permanece sin activar; no almacenar registros reales todavía.
+
+- Dirección del responsable comunicada por el usuario: Calle La Pera N.º 435, Urb. Los Sauces II, Surquillo, Lima, Perú. Pendiente corroboración documental como domicilio fiscal vigente.
