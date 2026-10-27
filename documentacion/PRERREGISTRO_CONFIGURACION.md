@@ -37,3 +37,5 @@ Cloudflare Pages Functions requiere que la carpeta `functions/` esté en el proy
 - Dirección del responsable comunicada por el usuario: Calle La Pera N.º 435, Urb. Los Sauces II, Surquillo, Lima, Perú. Pendiente corroboración documental como domicilio fiscal vigente.
 
 - Correo institucional designado para consultas y ejercicio de derechos sobre datos personales: admin.general@coeprotec.com. Confirmar responsable de atención, procedimiento y plazos antes del lanzamiento.
+
+- Plazo de conservación aprobado por el usuario en nombre de gerencia: máximo 12 meses desde el último contacto o interacción registrada; sujeto a obligaciones legales aplicables. Pendiente mecanismo técnico de seguimiento de última interacción, eliminación y solicitudes de supresión.
