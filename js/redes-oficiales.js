@@ -2,7 +2,7 @@
    Ningún enlace se muestra mientras su URL esté vacía. */
 (() => {
   const channels = [
-    { name: 'Facebook', url: '', host: 'facebook.com' },
+    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61595371786875', host: 'facebook.com' },
     { name: 'Instagram', url: '', host: 'instagram.com' },
     { name: 'TikTok', url: '', host: 'tiktok.com' },
     { name: 'X', url: '', host: 'x.com' },
