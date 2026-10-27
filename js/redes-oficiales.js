@@ -4,8 +4,8 @@
   const channels = [
     { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61595371786875', host: 'facebook.com' },
     { name: 'Instagram', url: 'https://www.instagram.com/coeprotec/?hl=es', host: 'instagram.com' },
-    { name: 'TikTok', url: 'https://www.tiktok.com/@coeprotec_27', host: 'tiktok.com' },
-    { name: 'X', url: '', host: 'x.com' },
+    { name: 'TikTok', url: 'https://www.tiktok.com/@coeprotec', host: 'tiktok.com' },
+    { name: 'X', url: 'https://x.com/coeprotec84906', host: 'x.com' },
     { name: 'YouTube', url: 'https://www.youtube.com/@Coeprotec', host: 'youtube.com' }
   ];
   const allowed = channels.filter(item => {
