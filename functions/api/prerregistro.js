@@ -3,7 +3,9 @@
 const respond=(body,status=200)=>new Response(JSON.stringify(body),{status,headers:{"content-type":"application/json; charset=utf-8","cache-control":"no-store","x-content-type-options":"nosniff"}});
 export async function onRequestPost({request,env}){
  if(env.PREREG_ENABLED!=="true")return respond({ok:false,error:"Prerregistro no disponible."},503);
- if(!env.PREREG_DB||!env.TURNSTILE_SECRET_KEY||!env.PRIVACY_VERSION||env.PRIVACY_VERSION==="pendiente")return respond({ok:false,error:"Servicio no configurado."},503);
+ // No admitir envíos hasta confirmar explícitamente los controles de riesgo en el entorno.
+ if(env.PREREG_SECURITY_APPROVED!=="true")return respond({ok:false,error:"Registro temporalmente suspendido."},503);
+ if(!env.PREREG_DB||!env.TURNSTILE_SECRET_KEY||!/^20\d{2}-\d{2}-\d{2}-v\d+$/.test(env.PRIVACY_VERSION||""))return respond({ok:false,error:"Servicio no configurado."},503);
  const origin=request.headers.get("Origin");
  if(!origin||origin!==new URL(request.url).origin)return respond({ok:false,error:"Origen no autorizado."},403);
  if(!request.headers.get("content-type")?.toLowerCase().startsWith("application/json"))return respond({ok:false,error:"Formato no válido."},415);
@@ -21,7 +23,7 @@ export async function onRequestPost({request,env}){
  if(value.consentimiento!==true||typeof value.marketing!=="boolean")return respond({ok:false,error:"Consentimiento inválido."},400);
  if(typeof value.turnstileToken!=="string"||value.turnstileToken.length<10||value.turnstileToken.length>2048)return respond({ok:false,error:"Verificación de seguridad necesaria."},400);
  try{
-  const body=new FormData();body.set("secret",env.TURNSTILE_SECRET_KEY);body.set("response",value.turnstileToken);
+  const body=new FormData();body.set("secret",env.TURNSTILE_SECRET_KEY);body.set("response",value.turnstileToken);body.set("idempotency_key",crypto.randomUUID());
   const verification=await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify",{method:"POST",body,signal:AbortSignal.timeout(5000)});
   if(!verification.ok)return respond({ok:false,error:"No se pudo verificar la seguridad."},503);
   const result=await verification.json();
