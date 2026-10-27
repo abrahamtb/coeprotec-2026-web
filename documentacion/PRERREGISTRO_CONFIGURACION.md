@@ -24,3 +24,12 @@ Estado: interfaz visible **deshabilitada**. No recolectar datos personales hasta
 La rama `Abraham/preview-gerencia` está usada como producción por Cloudflare Pages de prueba. No introducir datos reales en ella hasta habilitación aprobada. No publicar APIs de consulta o exportación sin autenticación. No subir secretos al repositorio.
 
 Cloudflare Pages Functions requiere que la carpeta `functions/` esté en el proyecto Git y no en un subdirectorio del directorio de salida.
+
+## Responsable confirmado por gerencia (27/10/2026)
+
+- Marca operativa: COEPROTEC (aún sin RUC propio).
+- Responsable autorizado temporalmente: CONSULTORIA EMPRESARIAL P & M SOCIEDAD ANONIMA CERRADA, RUC 20523027655.
+- Autorización: confirmación comunicada por la persona encargada del proyecto, a solicitud de gerencia. Se recomienda respaldarla internamente por escrito.
+- Información preliminar publicada en `privacidad.html`; **no** sustituye la política aprobada.
+- Pendientes: domicilio, canal ARCO/revocación, plazo de conservación, encargados y transferencias, inscripción del banco cuando corresponda y aprobación jurídica del texto definitivo.
+- `PREREG_ENABLED` permanece sin activar; no almacenar registros reales todavía.
