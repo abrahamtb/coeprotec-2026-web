@@ -3,7 +3,7 @@
 const respond=(body,status=200)=>new Response(JSON.stringify(body),{status,headers:{"content-type":"application/json; charset=utf-8","cache-control":"no-store","x-content-type-options":"nosniff"}});
 export async function onRequestPost({request,env}){
  if(env.PREREG_ENABLED!=="true")return respond({ok:false,error:"Prerregistro no disponible."},503);
- if(!env.PREREG_DB||!env.TURNSTILE_SECRET_KEY)return respond({ok:false,error:"Servicio no configurado."},503);
+ if(!env.PREREG_DB||!env.TURNSTILE_SECRET_KEY||!env.PRIVACY_VERSION||env.PRIVACY_VERSION==="pendiente")return respond({ok:false,error:"Servicio no configurado."},503);
  const origin=request.headers.get("Origin");
  if(!origin||origin!==new URL(request.url).origin)return respond({ok:false,error:"Origen no autorizado."},403);
  if(!request.headers.get("content-type")?.toLowerCase().startsWith("application/json"))return respond({ok:false,error:"Formato no válido."},415);
